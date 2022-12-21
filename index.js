@@ -1,3 +1,9 @@
+const dotenv=require("dotenv")
+// require('dotenv').config()
+dotenv.config()
+
+const { DISCORD_TOKEN, CLIENT_ID } =require('./config')
+
 const {Client, GatewayIntentBits } = require("discord.js");
 const colors=require("colors")
 // const client2=new Client({intents: 253})
@@ -25,4 +31,5 @@ client.once('ready', ()=>{
     // console.log(testChannel)
 })
 
-client.login('MTA1NTA1NTI1OTEyMDE5MzU4Ng.GWdDvp.W5xpL9qzveQj3MsK-Plf4VKT39OEi8WRd0dOHM')
+// client.login(process.env.DISCORD_TOKEN)
+client.login(DISCORD_TOKEN)
